@@ -13,9 +13,9 @@ add_subdirectory(my_static_lib) # Aggiungo cartella contenente un altro CMakeLis
 
 target_include_directories(${PROJECT_NAME} PUBLIC my_static_lib/include) # Dico dove trovare header (gcc -I)
 
-# target_link_directories(${PROJECT_NAME} PRIVATE path/to/lib) # Posizione my_slibrary.a (gcc -L), creata grazie a my_static_lib/CMakeLists.txt.
-# In questo caso è un comando opzionale in quanto la libreria in questione non la stiamo importando da fuori (ex: non è in una cartella sul Desktop), ma la stiamo
-# appunto creando con CMake partendo dai *cpp. Di conseguenza, avendola creata con Cmake, Cmake stesso sa dove andarla a trovare (in cmake-test/build/, vedi 
+# target_link_directories(${PROJECT_NAME} PRIVATE path/to/lib) # Posizione my_slibrary.a (gcc -L)
+# In questo caso è un comando opzionale in quanto la libreria in questione non la stiamo importando "da fuori" (ex: non è in una cartella sul Desktop), ma la stiamo
+# appunto creando con CMake partendo dai *cpp. Di conseguenza, avendola creata con CMake, CMake stesso sa dove andarla a trovare (in cmake-test/build/, vedi 
 # commenti in my_static_lib/CMakeLists.txt per capire il motivo). 
 
 target_link_libraries(${PROJECT_NAME} my_slibrary) # Libreria senza 'lib' (gcc -l)
