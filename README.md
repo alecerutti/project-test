@@ -1,5 +1,5 @@
-*** Struttura progetto
-
+### Struttura progetto
+```
 ├── CMakeLists.txt
 ├── README.md
 │
@@ -25,12 +25,12 @@
     │       └── printer.h
     └── src
         └── printer.cpp
+```
 
+### Build & Run  
 
-*** Come runnnare
+```bash
 > cd cmake-test/
 > cmake -S . -B build/
 > cd build/
 > ./cmake-test
-
-
